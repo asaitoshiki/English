@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function calculateScore() {
+            var score = 0;
+            if (document.querySelector('input[name="q1"]:checked').value === "correct") {
+                score += 20;
+            }
+            if (document.querySelector('input[name="q2"]:checked').value === "correct") {
+                score += 20;
+            }
+            if (document.querySelector('input[name="q3"]:checked').value === "correct") {
+                score += 20;
+            }
+            if (document.querySelector('input[name="q4"]:checked').value === "correct") {
+                score += 20;
+            }
+            if (document.querySelector('input[name="q5"]:checked').value === "correct") {
+                score += 20;
+            }
+            var name = document.getElementById("username").value;
+            alert(name + ", your final score is: " + score);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>My Website</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="game.html">Game</a>
+    </nav>
+    <div class="sidebar">
+        <h2>Useful Links</h2>
+        <ul>
+            <li><a href="https://example.com" target="_blank">Link1</a></li>
+            <li><a href="https://example.com" target="_blank">Link2</a></li>
+            <li><a href="https://example.com" target="_blank">Link3</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2>Quiz Game</h2>
+        <form>
+            <label for="username">Your Name:</label>
+            <input type="text" id="username" name="username"><br><br>
+            
+            <p>Question 1: What is 2 + 2?</p>
+            <input type="radio" name="q1" value="wrong"> 3<br>
+            <input type="radio" name="q1" value="correct"> 4<br>
+            <input type="radio" name="q1" value="wrong"> 5<br>
+            <input type="radio" name="q1" value="wrong"> 6<br><br>
+            
+            <!-- 追加の質問をここに挿入 -->
+            
+            <button type="button" onclick="calculateScore()">Submit</button>
+        </form>
+    </div>
+    <div class="sidebar contact-form">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" name="name" placeholder="Name">
+            <input type="email" name="email" placeholder="Email">
+            <textarea name="message" rows="4" placeholder="Message"></textarea>
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+        </form>
+    </div>
+    <footer>
+        <p>Created on: 2024-07-16</p>
+        <p>External Links: <a href="https://yourblog.com">Blog</a>, <a href="https://twitter.com/yourprofile">Twitter</a></p>
+    </footer>
+</body>
+</html>
